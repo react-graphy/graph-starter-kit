@@ -1,5 +1,6 @@
 const prepareGraphCreator = require('./bootstrap')
 const CommandQueue = require('./CommandQueue')
+const viewGraphData = require('./topological-sort')
 
 const graphData = {
   nodes: [
@@ -21,13 +22,16 @@ const graphData = {
 
 const start = async () => {
   const createGraph = await prepareGraphCreator()
-  const graph = createGraph(graphData)
-  const queue = new CommandQueue([
+  const graph = createGraph(viewGraphData)
+
+  console.log(viewGraphData)
+
+  /* const queue = new CommandQueue([
     () => graph.remove('#n0'),
     () => graph.$('#n1').addClass('current')
   ])
 
-  queue.execute()
+  queue.execute() */
 }
 
 start()

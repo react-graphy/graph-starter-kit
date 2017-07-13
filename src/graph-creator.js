@@ -24,10 +24,10 @@ module.exports = curry((container, {nodes = [], edges = []}) =>
       {
         selector: 'node',
         style: {
-          'text-margin-x': -23,
-          'content': 'data(id)',
+          'text-margin-y': -23,
+          'content': 'data(title)',
           'text-opacity': 0.5,
-          'color': '#fff',
+          'color': 'tomato',
           'text-valign': 'center',
           'text-halign': 'right',
           'background-color': '#424242'
